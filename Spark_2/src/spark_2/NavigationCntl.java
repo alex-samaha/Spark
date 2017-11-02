@@ -10,26 +10,53 @@ import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
 
 /**
  * FXML Controller class
  *
  * @author ags12
  */
-public class NavigationCntl implements Initializable {
+public class NavigationCntl {
 
     /**
      * Initializes the controller class.
      */
     
-    @FXML public void exitApp(ActionEvent event) {
-        System.exit(0);
+    private Stage mainStage;
+    
+    public NavigationCntl(Stage currentStage) {
+        
+        mainStage = currentStage;
+        setupNavigationScene();
     }
     
-    @Override
-    public void initialize(URL url, ResourceBundle rb) {
-        // TODO
-    }    
+    public void setupNavigationScene() {
+        
+        Parent root;
+        Scene scene;
+        
+        try {
+            // load the new fxml file
+            root = FXMLLoader.load(getClass().getResource("NavigationUI.fxml"));
+            scene = new Scene(root, 600, 400);
+            scene.getStylesheets().add(getClass().getResource("Navigation.css").toExternalForm());
+            
+            // set the stage with the new scene (Main Menu)
+            mainStage.setScene(scene);
+            mainStage.setTitle("Spark Main Menu");
+            mainStage.show();
+        }
+        
+        catch (Exception e) {
+            e.printStackTrace();
+        }
+        
+    }
+    
     
 }
