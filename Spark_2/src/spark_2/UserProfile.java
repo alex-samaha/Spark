@@ -15,10 +15,10 @@ public class UserProfile {
     public String userPersonality;
     public String education;
 
-    public UserProfile(String aname, String auserPersonality, String aeducation) {
-        this.name = aname;
-        this.userPersonality = auserPersonality;
-        this.education = aeducation;
+    public UserProfile(String aName, String aUserPersonality, String aEducation) {
+        this.name = aName;
+        this.userPersonality = aUserPersonality;
+        this.education = aEducation;
     }
     
 }
