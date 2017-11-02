@@ -27,7 +27,6 @@ public class LoginCntl implements Initializable {
     
     private UserList theUserList;
     private Stage mainStage;
-    private Parent root;
     private NavigationCntl theNavigationCntl;
     
     @FXML private Label label;
@@ -56,29 +55,13 @@ public class LoginCntl implements Initializable {
     }
     
     public void getNavCntrl() {
-        try {
-            // get the Stage from the old window in order to switch it up
-            mainStage = (Stage) button.getScene().getWindow();
-            // create new Parent object - this holds the new scene
-            root = (Parent) FXMLLoader.load(getClass().getResource("NavigationUI.fxml"));
-            
-            // set the new scene
-            Scene scene = new Scene(root, 600, 400);
-            
-            // load the CSS for the main menu
-            scene.getStylesheets().add(LoginCntl.class.getResource("Navigation.css").toExternalForm());
-            
-            // set the stage with the new scene (Main Menu)
-            mainStage.setScene(scene);
-            mainStage.setTitle("Spark Main Menu");
-            mainStage.show();
-        }
+        // get the Stage from the old window in order to switch it up
+        mainStage = (Stage) button.getScene().getWindow();
         
-        
-        catch (Exception e) {
-            System.out.println(e.getMessage());
-        }
-        
+        // create instance of nav controller to load main menu
+        theNavigationCntl = new NavigationCntl(mainStage);
+            
+           
     }
     
     @FXML public void cancelLogin(ActionEvent event) {
