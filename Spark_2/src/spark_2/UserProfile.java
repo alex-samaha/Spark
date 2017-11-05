@@ -20,7 +20,7 @@ public class UserProfile {
         this.userPersonality = aUserPersonality;
         this.education = aEducation;
     }
-      public boolean userPersonality(){
+      public boolean UserPersonality(){
         if (userPersonality.equals("Corageous")){
             return true; 
         }
