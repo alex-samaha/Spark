@@ -20,12 +20,15 @@ public class UserProfile {
         this.userPersonality = aUserPersonality;
         this.education = aEducation;
     }
-      public boolean UserPersonality(){
-        if (userPersonality.equals("Corageous")){
-            return true; 
-        }
-        else {
-            return false;
-        }
+     public boolean UserPersonality(){
+        return userPersonality.equals("Corageous") ||userPersonality.equals("Nerd");
     }
+    
+    public boolean EducationHistory(){
+        return education.equals("Bachelor's Degree") || education.equals ("Associate's Degree") || education.equals("GED") || education.equals("Master's Degree") || education.equals("None");
+        
+        
+    }
+    
+     
 }
