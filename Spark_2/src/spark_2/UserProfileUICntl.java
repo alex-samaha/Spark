@@ -14,34 +14,37 @@ import javafx.scene.control.Button;
 import javafx.stage.Stage;
 
 /**
+ * FXML Controller class
  *
- * @author ags12
+ * @author Scott
  */
-public class NavigationUICntl implements Initializable {
+public class UserProfileUICntl implements Initializable {
+
+    /**
+     * Initializes the controller class.
+     */
+    
     
     private Stage mainStage;
-    private UserProfileCntl theUserProfileCntl;
+    private UserProfileEditCntl theUserProfileEditCntl;
     
-    @FXML private Button profileButton;
+    @FXML private Button editButton;
     
     
-    @FXML public void loadProfile(ActionEvent even) {
+    
+    @FXML public void loadEditProfile(ActionEvent event) {
         
-        mainStage = (Stage) profileButton.getScene().getWindow();
+        // get the current stage
+        mainStage = (Stage) editButton.getScene().getWindow();
         
-        theUserProfileCntl = new UserProfileCntl(mainStage);
+        // create UserProfileEditCntl object to setup scene
+        theUserProfileEditCntl = new UserProfileEditCntl(mainStage);
         
     }
     
-     @FXML public void exitApp(ActionEvent event) {
-        System.exit(0);
-    }
-     
-     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }    
-    
     
 }

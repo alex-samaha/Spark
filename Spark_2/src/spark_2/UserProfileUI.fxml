@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="spark_2.UserProfileUIController">
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="spark_2.UserProfileUICntl">
     <stylesheets>
         <URL value="@UserProfile.css" />
     </stylesheets>
@@ -17,16 +17,17 @@
             <Font size="18.0" />
          </font>
       </Label>
-      <TextField layoutX="39.0" layoutY="115.0" />
-      <Label layoutX="39.0" layoutY="87.0" text="Name:" />
-      <Label layoutX="39.0" layoutY="158.0" text="Personality Type:" />
-      <TextField layoutX="39.0" layoutY="185.0" />
+      <Label layoutX="40.0" layoutY="75.0" text="Name:" />
+      <Label layoutX="35.0" layoutY="153.0" text="Personality Type:" />
       <Label layoutX="42.0" layoutY="227.0" text="Education:" />
-      <TextField layoutX="42.0" layoutY="256.0" />
       <Button layoutX="515.0" layoutY="22.0" mnemonicParsing="false" text="Home" />
-      <Button layoutX="13.0" layoutY="359.0" mnemonicParsing="false" text="Edit Profile" />
+      <Button fx:id="editButton" layoutX="13.0" layoutY="359.0" mnemonicParsing="false" onAction="#loadEditProfile" text="Edit Profile" />
       <TextField layoutX="348.0" layoutY="187.0" />
       <Label layoutX="348.0" layoutY="158.0" text="Resume:" />
       <Button layoutX="352.0" layoutY="222.0" mnemonicParsing="false" text="Upload" />
+      <Label layoutX="44.0" layoutY="111.0" prefHeight="21.0" prefWidth="187.0" />
+      <Label layoutX="40.0" layoutY="111.0" prefHeight="21.0" prefWidth="187.0" text="(Name)" />
+      <Label layoutX="32.0" layoutY="185.0" text="(Personality)" />
+      <Label layoutX="39.0" layoutY="261.0" text="(Education)" />
    </children>
 </AnchorPane>

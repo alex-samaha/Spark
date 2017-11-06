@@ -9,10 +9,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
@@ -42,9 +39,9 @@ public class LoginCntl implements Initializable {
         theUserList = new UserList();
         String theUsername = username.getText();
         char[] thePassword = password.getText().toCharArray();
-        boolean authenticated = false;
         
         if(theUserList.authenticate(theUsername, thePassword)) {
+            Session.userID = theUsername;
             loginLabel.setText("Login Successful!");
             getNavCntrl();
         }
