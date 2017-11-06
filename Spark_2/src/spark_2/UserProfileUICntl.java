@@ -34,6 +34,7 @@ public class UserProfileUICntl implements Initializable {
     
     private Stage mainStage;
     private UserProfileEditCntl theUserProfileEditCntl;
+    private UserProfile theUserProfile;
     
     @FXML private Button editButton;
     @FXML private Label nameLabel;
@@ -52,57 +53,15 @@ public class UserProfileUICntl implements Initializable {
         
     }
     
-    public void showProfileData() throws ParseException {
-        
-        JSONParser parser = new JSONParser();
-        JSONObject data = new JSONObject();
-        
-        try {
-            
-            Object obj = parser.parse(new FileReader("data.json"));
-            data = (JSONObject) obj;
-            JSONArray userList = (JSONArray) data.get("users");
-            
-            for (Object user : userList) {
-                // get the overall user data (general user object)
-                JSONObject userJSON = (JSONObject) user;
-                
-                if(userJSON.get("Username").equals(Session.userID)) {
-                
-                    // grab the current user's profile data
-                    JSONArray userProfile = (JSONArray) userJSON.get("Profile Info");
-                    JSONObject name = (JSONObject) userProfile.get(0);
-                    JSONObject personality = (JSONObject) userProfile.get(1);
-                    JSONObject education = (JSONObject) userProfile.get(2);
-
-                    nameLabel.setText(name.get("Name").toString());
-                    personalityLabel.setText(personality.get("Personality").toString());
-                    educationLabel.setText(education.get("Education").toString());
-                    
-                    System.out.println(userJSON.get("Username"));
-                    System.out.println(name.get("Name"));
-                    System.out.println(personality.get("Personality"));
-                    System.out.println(education.get("Education"));
-                    
-                }
-            }
-            
-        }
-        
-        catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         
-        try {
-            showProfileData();
-        }
-        catch (Exception e) {
-            System.out.println(e.getMessage());
-        }
+        theUserProfile = new UserProfile();
+        nameLabel.setText(theUserProfile.getName());
+        personalityLabel.setText(theUserProfile.getUserPersonality());
+        educationLabel.setText(theUserProfile.getEducation());
+        
+    
     }    
     
 }
