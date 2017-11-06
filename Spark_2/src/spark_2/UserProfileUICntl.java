@@ -35,11 +35,13 @@ public class UserProfileUICntl implements Initializable {
     private Stage mainStage;
     private UserProfileEditCntl theUserProfileEditCntl;
     private UserProfile theUserProfile;
+    private NavigationCntl theNavigationCntl;
     
     @FXML private Button editButton;
     @FXML private Label nameLabel;
     @FXML private Label personalityLabel;
     @FXML private Label educationLabel;
+    @FXML private Button homeButton;
     
     
     
@@ -51,6 +53,15 @@ public class UserProfileUICntl implements Initializable {
         // create UserProfileEditCntl object to setup scene
         theUserProfileEditCntl = new UserProfileEditCntl(mainStage);
         
+    }
+    
+    @FXML public void loadMainMenu(ActionEvent event) {
+        
+        //get the current stage
+        mainStage = (Stage) homeButton.getScene().getWindow();
+        
+        // create NavigationCntl object to setup scene
+        theNavigationCntl = new NavigationCntl(mainStage);
     }
     
     @Override

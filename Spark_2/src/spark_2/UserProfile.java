@@ -61,11 +61,6 @@ public class UserProfile {
                     this.userPersonality =  personality.get("Personality").toString();
                     this.education = education.get("Education").toString();
                     
-                    System.out.println(userJSON.get("Username"));
-                    System.out.println(name.get("Name"));
-                    System.out.println(personality.get("Personality"));
-                    System.out.println(education.get("Education"));
-                    
                 }
             }
             

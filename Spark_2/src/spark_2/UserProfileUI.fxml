@@ -20,7 +20,7 @@
       <Label layoutX="40.0" layoutY="75.0" text="Name:" />
       <Label layoutX="35.0" layoutY="153.0" text="Personality Type:" />
       <Label layoutX="35.0" layoutY="239.0" text="Education:" />
-      <Button layoutX="515.0" layoutY="22.0" mnemonicParsing="false" text="Home" />
+      <Button fx:id="homeButton" layoutX="515.0" layoutY="22.0" mnemonicParsing="false" onAction="#loadMainMenu" text="Home" />
       <Button fx:id="editButton" layoutX="13.0" layoutY="359.0" mnemonicParsing="false" onAction="#loadEditProfile" text="Edit Profile" />
       <TextField layoutX="348.0" layoutY="187.0" />
       <Label layoutX="348.0" layoutY="158.0" text="Resume:" />
