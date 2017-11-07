@@ -51,7 +51,7 @@ public class UserProfileEditUICntl implements Initializable{
     }
     
     
-    // returns back to the profile page
+    // returns back to the user profile page
     // when the users clicks on the submit button it will take them back to their profile
     public void loadProfile() {
         
