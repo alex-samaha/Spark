@@ -13,7 +13,7 @@
          </font>
       </Label>
       <Button fx:id="profileButton" layoutX="252.0" layoutY="98.0" mnemonicParsing="false" onAction="#loadProfile" text="User Profile" />
-      <Button layoutX="239.0" layoutY="160.0" mnemonicParsing="false" text="Personality Test" />
+      <Button fx:id="personalityTestButton" layoutX="239.0" layoutY="160.0" mnemonicParsing="false" onAction="#loadPersonalityTest" text="Personality Test" />
       <Button layoutX="245.0" layoutY="227.0" mnemonicParsing="false" text="Job Suitability" />
       <Button layoutX="254.0" layoutY="288.0" mnemonicParsing="false" text="Search Job" />
       <Button layoutX="462.0" layoutY="346.0" mnemonicParsing="false" text="Notifications" />
