@@ -10,50 +10,54 @@ package spark_2;
  * @author Scott
  */
 public class CareerProfile {
-    private String chosenPersonality;
-    private String description;
+    private String companyName;
+    private String availableJobs;
+    private String location;
     
-    public CareerProfile(String aChosenPersonality, String aDescription){
-        this.chosenPersonality = aChosenPersonality;
-        this.description = aDescription;
+    public CareerProfile(){
+        
+    }
+
+    /**
+     * @return the companyName
+     */
+    public String getCompanyName() {
+        return companyName;
+    }
+
+    /**
+     * @param companyName the companyName to set
+     */
+    public void setCompanyName(String companyName) {
+        this.companyName = companyName;
+    }
+
+    /**
+     * @return the availableJobs
+     */
+    public String getAvailableJobs() {
+        return availableJobs;
+    }
+
+    /**
+     * @param availableJobs the availableJobs to set
+     */
+    public void setAvailableJobs(String availableJobs) {
+        this.availableJobs = availableJobs;
+    }
+
+    /**
+     * @return the location
+     */
+    public String getLocation() {
+        return location;
+    }
+
+    /**
+     * @param location the location to set
+     */
+    public void setLocation(String location) {
+        this.location = location;
     }
     
-    public boolean personalityExist(){
-        if(this.chosenPersonality.equals("Nerd")){
-            return true;
-        }
-        else{
-            return false;
-        }
-    }
-    
-    //*************************SETTERS AND GETTERS BELOW********************************************
-
-    /**
-     * @return the chosenPersonality
-     */
-    public String getChosenPersonality() {
-        return chosenPersonality;
-    }
-
-    /**
-     * @param chosenPersonality the chosenPersonality to set
-     */
-    public void setChosenPersonality(String chosenPersonality) {
-        this.chosenPersonality = chosenPersonality;
-    }
-
-    /**
-     * @return the description
-     */
-    public String getDescription() {
-        return description;
-    }
-
-    /**
-     * @param description the description to set
-     */
-    public void setDescription(String description) {
-        this.description = description;
-    }
 }
