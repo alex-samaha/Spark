@@ -6,11 +6,10 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.151" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="spark_2.CareerProfileEditUICntl">
    <children>
-      <Button layoutX="498.0" layoutY="24.0" mnemonicParsing="false" text="Home" />
-      <Button layoutX="28.0" layoutY="347.0" mnemonicParsing="false" text="Submit" />
+      <Button fx:id="homeButton" layoutX="498.0" layoutY="24.0" mnemonicParsing="false" onAction="#loadMainMenu" text="Home" />
+      <Button fx:id="submitButton" layoutX="28.0" layoutY="347.0" mnemonicParsing="false" onAction="#saveProfile" text="Submit" />
       <Label layoutX="242.0" layoutY="45.0" prefHeight="50.0" prefWidth="117.0" text="Edit Profile">
          <font>
             <Font size="18.0" />
@@ -19,8 +18,8 @@
       <Label layoutX="55.0" layoutY="125.0" text="Company:" />
       <Label layoutX="55.0" layoutY="190.0" text="Available Jobs:" />
       <Label layoutX="55.0" layoutY="255.0" text="Location:" />
-      <TextField layoutX="142.0" layoutY="120.0" />
-      <TextField layoutX="163.0" layoutY="185.0" />
-      <TextField layoutX="135.0" layoutY="250.0" />
+      <TextField fx:id="company" layoutX="163.0" layoutY="120.0" />
+      <TextField fx:id="jobs" layoutX="163.0" layoutY="185.0" />
+      <TextField fx:id="location" layoutX="163.0" layoutY="250.0" />
    </children>
 </AnchorPane>

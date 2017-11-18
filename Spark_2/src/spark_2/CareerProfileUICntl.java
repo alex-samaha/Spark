@@ -24,6 +24,7 @@ public class CareerProfileUICntl implements Initializable {
     private Stage mainStage;
     private CareerProfileCntl theCareerProfileCntl;
     private CareerProfile theCareerProfile;
+    private CareerProfileEditCntl theCareerProfileEditCntl;
     private NavigationCntl theNavigationCntl;
     //private CareerProfileEditCntl theCareerProfileEditCntl;
     
@@ -49,7 +50,7 @@ public class CareerProfileUICntl implements Initializable {
         mainStage = (Stage) editProfileButton.getScene().getWindow();
         
         // create UserProfileEditCntl object to setup scene
-        //theCareerProfileEditCntl = new CareerProfileEditCntl(mainStage);
+        theCareerProfileEditCntl = new CareerProfileEditCntl(mainStage);
         
     }
     /**
@@ -60,7 +61,7 @@ public class CareerProfileUICntl implements Initializable {
         // TODO
         theCareerProfile = new CareerProfile();
         companyNameLabel.setText(theCareerProfile.getCompanyName());
-        availableJobsLabel.setText(theCareerProfile.getAvailableJobs());
+        availableJobsLabel.setText(theCareerProfile.getJobType());
         locationLabel.setText(theCareerProfile.getLocation());
     }    
     

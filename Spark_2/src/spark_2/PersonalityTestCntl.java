@@ -34,6 +34,7 @@ public class PersonalityTestCntl {
         Scene scene;
         
         try {
+            System.out.println("TEST PLEASE");
             // load the new fxml file
             root = FXMLLoader.load(getClass().getResource("PersonalityTest.fxml"));
             scene = new Scene(root, 600, 400);

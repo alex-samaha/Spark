@@ -1,1 +1,6 @@
-{"users":[{"Username":"Name 0","Profile Info":[{"Name":"Mike"},{"Personality":"Mean"},{"Education":"Penn State"}]},{"Username":"Name 0","Profile Info":[{"Name":"Joey"},{"Personality":"Smart"},{"Education":"Harvard"}]},{"Username":"Name 0","Profile Info":[{"Name":"Rob"},{"Personality":"Smart"},{"Education":"Cornell"}]},{"Username":"Name 1","Profile Info":[{"Name":"Francis"},{"Personality":"Cool"},{"Education":"Penn State"}]},{"Username":"Name 2","Profile Info":[{"Name":"Test"},{"Personality":"Tech"},{"Education":"Bachelor's Degree"}]}]}
+{"users":[{"Username":"Name 0","Profile Info":[{"Name":"Mike"},{"Personality":"Smart"},{"Education":"Penn State"},{"UserType":"user"}]},
+        {"Username":"Name 1","Profile Info":[{"Name":"Alex"},{"Personality":"Nerd"},{"Education":"Penn State"},{"UserType":"user"}]},
+        {"Username":"Name 2","Profile Info":[{"Name":"Jacques"},{"Personality":"Cool"},{"Education":"Delaware"},{"UserType":"user"}]},
+        {"Username":"Name 3","Profile Info":[{"Name":"Chris"},{"Personality":"Cool"},{"Education":"Delaware"},{"UserType":"employer"}]},
+        {"Username":"Name 4","Profile Info":[{"Name":"Joey"},{"Personality":"Cool"},{"Education":"Delaware"},{"UserType":"employer"}]}
+        ]}
