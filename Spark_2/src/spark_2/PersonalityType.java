@@ -19,6 +19,18 @@ public class PersonalityType {
         this.description = aDescription;
     }
     
+    public PersonalityType(double num){
+        if(num > 0 && num <= 1){
+            name = "Stable";
+        }
+        else if(num > 1 && num <= 2){
+            name = "Independant";
+        }
+        else{
+            name = "Critical Thinker";
+        }
+    }
+    
     public String typicalJob(String thePT){
         if(thePT.equals("Courageous")){
             return "Fire Fighter";

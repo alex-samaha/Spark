@@ -11,6 +11,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 /**
@@ -21,10 +22,14 @@ public class PersonalityTestUICntl implements Initializable{
     
     private Stage mainStage;
     private NavigationCntl theNavigationCntl;
+    private PersonalityTest thePersonalityTest;
     
     @FXML private Button homeButton;
-    
-    
+    @FXML private Button submitButton;
+    @FXML private TextField q1TextField;
+    @FXML private TextField q2TextField;
+    @FXML private TextField q3TextField;
+    @FXML private TextField q4TextField;
     
     @FXML public void loadMainMenu(ActionEvent event) {
         
@@ -33,6 +38,15 @@ public class PersonalityTestUICntl implements Initializable{
         
         // instantiate NavigationCntl and load main menu
         theNavigationCntl = new NavigationCntl(mainStage);
+        
+    }
+    
+    @FXML public void submitPersonalityTest(ActionEvent event){
+        String personalityNameToDisplay;
+        
+        thePersonalityTest = new PersonalityTest(q1TextField.getText(), q2TextField.getText(), q3TextField.getText(), q4TextField.getText());
+        personalityNameToDisplay = thePersonalityTest.getPersonalityType(thePersonalityTest.personalityNum()).getName();
+        
         
     }
     

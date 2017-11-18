@@ -15,23 +15,28 @@ public class PersonalityTest {
     private String question2;
     private String question3;
     private String question4;
-    private String question5;
+    private PersonalityType thePersonalityType;
     
-    public PersonalityTest(String q1, String q2, String q3, String q4, String q5){
+    public PersonalityTest(String q1, String q2, String q3, String q4){
         this.question1 = q1;
         this.question2 = q2; 
         this.question3 = q3;
         this.question4 = q4;
-        this.question5 = q5;
     }
     
-    public void FirstQuestion(){
-        if ((question1.equals(true) && (question2.equals(true)) && (question3.equals(true)) && (question4.equals(true)) && question5.equals(true))) {
-        
-            System.out.println("");
-        
-        }
-        
+    public double personalityNum(){
+        double myNum = 0;
+        myNum += Double.parseDouble(question1);
+        myNum += Double.parseDouble(question2);
+        myNum += Double.parseDouble(question3);
+        myNum += Double.parseDouble(question4);
+        myNum = myNum/4;
+        return myNum;
+    }
+    
+    public PersonalityType getPersonalityType(double num){
+        thePersonalityType = new PersonalityType(num);
+        return thePersonalityType;
     }
     
     
