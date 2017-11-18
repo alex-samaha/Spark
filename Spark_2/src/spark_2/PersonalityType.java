@@ -11,37 +11,25 @@ package spark_2;
  */
 public class PersonalityType {
     
-    private String name;
-    private String description;
+    public static String name;
+    public static String description;
     
-    public PersonalityType(String aName, String aDescription){
-        this.name = aName;
-        this.description = aDescription;
-    }
     
     public PersonalityType(double num){
         if(num > 0 && num <= 1){
             name = "Stable";
+            description = "You are a stable individual. \nYou are not likely to give way or overturn\n. You are firmly fixed on what you think is right.";
         }
         else if(num > 1 && num <= 2){
-            name = "Independant";
+            name = "Independent";
+            description = "You are an independent individual\n. You are free from outside control\n and do not depend on the authority of others.";
         }
         else{
             name = "Critical Thinker";
+            description = "You are a critical thinker, meaning that you form\n your judgements based on rational, skeptical, unbiased analysis\n or evaluation of factual evidence.";
         }
     }
     
-    public String typicalJob(String thePT){
-        if(thePT.equals("Courageous")){
-            return "Fire Fighter";
-        }
-        else if(thePT.equals("Nerd")){
-            return "Java Devloper";
-        }
-        else{
-            return "You do not have a Personality";
-        }
-    }
     
     //*************************SETTERS AND GETTERS BELOW********************************************
 

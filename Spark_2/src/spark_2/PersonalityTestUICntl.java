@@ -23,6 +23,7 @@ public class PersonalityTestUICntl implements Initializable{
     private Stage mainStage;
     private NavigationCntl theNavigationCntl;
     private PersonalityTest thePersonalityTest;
+    private ResultsCntl theResultsCntl;
     
     @FXML private Button homeButton;
     @FXML private Button submitButton;
@@ -42,10 +43,16 @@ public class PersonalityTestUICntl implements Initializable{
     }
     
     @FXML public void submitPersonalityTest(ActionEvent event){
+        
+        // get current window
+        mainStage = (Stage) submitButton.getScene().getWindow();
+        
         String personalityNameToDisplay;
         
         thePersonalityTest = new PersonalityTest(q1TextField.getText(), q2TextField.getText(), q3TextField.getText(), q4TextField.getText());
         personalityNameToDisplay = thePersonalityTest.getPersonalityType(thePersonalityTest.personalityNum()).getName();
+         
+        theResultsCntl = new ResultsCntl(mainStage);
         
         
     }

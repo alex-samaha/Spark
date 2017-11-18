@@ -17,6 +17,8 @@ public class PersonalityTest {
     private String question4;
     private PersonalityType thePersonalityType;
     
+    public static double personalityScore;
+    
     public PersonalityTest(String q1, String q2, String q3, String q4){
         this.question1 = q1;
         this.question2 = q2; 
@@ -31,6 +33,9 @@ public class PersonalityTest {
         myNum += Double.parseDouble(question3);
         myNum += Double.parseDouble(question4);
         myNum = myNum/4;
+        
+        personalityScore = myNum;
+        
         return myNum;
     }
     

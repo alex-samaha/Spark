@@ -39,9 +39,11 @@ public class ResultsUICntl implements Initializable{
     
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        //scoreLabel.setText(value);
-        //personalityLabel.setText(value);
-        //descriptionLabel.setText(value);
+        
+        scoreLabel.setText(Double.toString(PersonalityTest.personalityScore));
+        personalityLabel.setText(PersonalityType.name);
+        descriptionLabel.setText(PersonalityType.description);
+
     }
     
 }
