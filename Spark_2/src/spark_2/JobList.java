@@ -34,5 +34,8 @@ public class JobList {
         return this.jobList.get(i);
     }
     
+    public void add(Job e){
+        this.jobList.add(e);
+    }
     
 }

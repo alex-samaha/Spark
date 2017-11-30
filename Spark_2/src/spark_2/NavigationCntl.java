@@ -28,6 +28,7 @@ public class NavigationCntl {
      */
     
     private Stage mainStage;
+    private JobList theJobList;
     
     public NavigationCntl(Stage currentStage) {
         
@@ -50,12 +51,22 @@ public class NavigationCntl {
             mainStage.setScene(scene);
             mainStage.setTitle("Spark Main Menu");
             mainStage.show();
+            this.theJobList = new JobList();
+            
         }
         
         catch (Exception e) {
             e.printStackTrace();
         }
         
+    }
+    
+    public JobList returnTheJobList(){
+        return this.theJobList;
+    }
+    
+    public void addJob(Job e){
+        this.theJobList.add(e);
     }
     
     
