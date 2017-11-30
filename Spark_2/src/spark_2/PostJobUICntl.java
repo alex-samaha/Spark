@@ -23,6 +23,7 @@ public class PostJobUICntl implements Initializable{
     
     private Stage mainStage;
     private NavigationCntl theNavigationCntl;
+    private CareerProfileCntl theCareerProfileCntl;
     
     
     @FXML private Button homeButton;
@@ -42,15 +43,17 @@ public class PostJobUICntl implements Initializable{
     }
     
     @FXML public void submitButton(ActionEvent event){
-        
-        Job newJob = new Job(jobTextField.getText(), companyTextField.getText(), descriptionTextField.getText(), Integer.parseInt(salaryTextField.getText()));
-        this.theNavigationCntl.returnTheJobList().add(newJob);
-        
-        //get the current stage
-        mainStage = (Stage) homeButton.getScene().getWindow();
-        
-        // create NavigationCntl object to setup scene
-        theNavigationCntl = new NavigationCntl(mainStage);
+        if(jobTextField.getText() != null && companyTextField.getText() != null && descriptionTextField.getText() != null && salaryTextField.getText() != null){
+            
+            Job newJob = new Job(jobTextField.getText(), companyTextField.getText(), descriptionTextField.getText(), Integer.parseInt(salaryTextField.getText()));
+            this.theNavigationCntl.returnTheJobList().add(newJob);
+
+            //get the current stage
+            mainStage = (Stage) submitButton.getScene().getWindow();
+
+            // create NavigationCntl object to setup scene
+            theCareerProfileCntl = new CareerProfileCntl(mainStage);
+        }
     }
 
     @Override
