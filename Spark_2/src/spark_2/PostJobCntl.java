@@ -27,7 +27,7 @@ public class PostJobCntl {
         try {
             // load the new fxml file
             root = FXMLLoader.load(getClass().getResource("PostJobUI.fxml"));
-            scene = new Scene(root, 900, 400);
+            scene = new Scene(root, 600, 400);
             
             // set the stage with the new scene (Main Menu)
             mainStage.setScene(scene);

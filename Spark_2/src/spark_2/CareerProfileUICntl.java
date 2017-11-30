@@ -27,13 +27,22 @@ public class CareerProfileUICntl implements Initializable {
     private CareerProfileEditCntl theCareerProfileEditCntl;
     private NavigationCntl theNavigationCntl;
     //private CareerProfileEditCntl theCareerProfileEditCntl;
+    private PostJobCntl thePostJobCntl;
     
     @FXML private Button homeButton;
     @FXML private Button editProfileButton;
+    @FXML private Button postJobButton;
     @FXML private Label companyNameLabel;
     @FXML private Label availableJobsLabel;
     @FXML private Label locationLabel;
     
+    @FXML public void loadPostJob(ActionEvent event){
+        
+        mainStage = (Stage) postJobButton.getScene().getWindow();
+        
+        thePostJobCntl = new PostJobCntl(mainStage);
+        
+    }
     
     @FXML public void loadMainMenu(ActionEvent event) {
         

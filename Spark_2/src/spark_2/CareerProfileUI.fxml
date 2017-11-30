@@ -36,5 +36,6 @@
          </font>
       </Label>
       <Button fx:id="editProfileButton" layoutX="21.0" layoutY="353.0" mnemonicParsing="false" onAction="#loadEditProfile" text="Edit Profile" />
+      <Button fx:id="postJobButton" layoutX="518.0" layoutY="353.0" mnemonicParsing="false" text="Post Job" onAction="#loadPostJob"/>
    </children>
 </AnchorPane>
