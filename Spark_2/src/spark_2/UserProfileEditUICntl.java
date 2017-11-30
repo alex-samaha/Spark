@@ -158,6 +158,7 @@ public class UserProfileEditUICntl implements Initializable{
     public void initialize(URL location, ResourceBundle resources) {
         try {
             loadData();
+            personality.setEditable(false);
         }
         
         catch (Exception e) {
