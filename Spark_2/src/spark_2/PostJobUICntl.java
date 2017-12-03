@@ -31,7 +31,7 @@ public class PostJobUICntl implements Initializable{
     @FXML private TextField jobTextField;
     @FXML private TextField companyTextField;
     @FXML private TextField descriptionTextField;
-    @FXML private TextField salaryTextField;
+    @FXML private TextField personalityTextField;
     
     @FXML public void loadMainMenu(ActionEvent event) {
         
@@ -43,9 +43,9 @@ public class PostJobUICntl implements Initializable{
     }
     
     @FXML public void submitButton(ActionEvent event){
-        if(jobTextField.getText() != null && companyTextField.getText() != null && descriptionTextField.getText() != null && salaryTextField.getText() != null){
+        if(jobTextField.getText() != null && companyTextField.getText() != null && descriptionTextField.getText() != null && personalityTextField.getText() != null){
             
-            Job newJob = new Job(jobTextField.getText(), companyTextField.getText(), descriptionTextField.getText(), Integer.parseInt(salaryTextField.getText()));
+            Job newJob = new Job(jobTextField.getText(), companyTextField.getText(), personalityTextField.getText());
             this.theNavigationCntl.returnTheJobList().add(newJob);
 
             //get the current stage

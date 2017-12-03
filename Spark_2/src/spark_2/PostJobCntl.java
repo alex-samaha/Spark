@@ -28,6 +28,7 @@ public class PostJobCntl {
             // load the new fxml file
             root = FXMLLoader.load(getClass().getResource("PostJobUI.fxml"));
             scene = new Scene(root, 600, 400);
+            scene.getStylesheets().add(getClass().getResource("PostJobUI.css").toExternalForm());
             
             // set the stage with the new scene (Main Menu)
             mainStage.setScene(scene);

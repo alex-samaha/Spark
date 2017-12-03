@@ -30,6 +30,7 @@ public class ResultsCntl {
             // load the new fxml file
             root = FXMLLoader.load(getClass().getResource("ResultsUI.fxml"));
             scene = new Scene(root, 900, 400);
+            scene.getStylesheets().add(getClass().getResource("ResultsUI.css").toExternalForm());
             
             // set the stage with the new scene (Main Menu)
             mainStage.setScene(scene);

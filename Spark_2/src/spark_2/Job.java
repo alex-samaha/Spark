@@ -5,77 +5,83 @@
  */
 package spark_2;
 
+import java.time.LocalDate;
+import javafx.beans.property.IntegerProperty;
+import javafx.beans.property.ObjectProperty;
+import javafx.beans.property.SimpleIntegerProperty;
+import javafx.beans.property.SimpleObjectProperty;
+import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.property.StringProperty;
+
 /**
+ * Model class for a Person.
  *
- * @author Scott
+ * @author Marco Jakob
  */
+
 public class Job {
-    private String jobTitle;
-    private String companyName;
-    private String description;
-    private int yearlySalary;
-    
-    public Job(String aJobTitle, String aCompanyName, String aDescription, int aYearlySalary){
-        this.jobTitle = aJobTitle;
-        this.companyName = aCompanyName;
-        this.description = aDescription;
-        this.yearlySalary = aYearlySalary;
-    }
+
+    private final StringProperty jobTitle;
+    private final StringProperty company;
+    private final StringProperty personalityType;
+ 
 
     /**
-     * @return the jobTitle
+     * Default constructor.
      */
+//    public Job() {
+//        this(null, null);
+//    }
+
+    /**
+     * Constructor with some initial data.
+     * 
+     * @param title
+     * @param companyName
+     * @param personality
+     */
+    public Job(String title, String companyName, String personality) {
+        this.jobTitle = new SimpleStringProperty(title);
+        this.company = new SimpleStringProperty(companyName);
+        this.personalityType = new SimpleStringProperty(personality);
+
+    
+    }
+
     public String getJobTitle() {
+        return jobTitle.get();
+    }
+
+    public void setJobTitle(String title) {
+        this.jobTitle.set(title);
+    }
+
+    public StringProperty jobTitleProperty() {
         return jobTitle;
     }
 
-    /**
-     * @param jobTitle the jobTitle to set
-     */
-    public void setJobTitle(String jobTitle) {
-        this.jobTitle = jobTitle;
-    }
-
-    /**
-     * @return the companyName
-     */
     public String getCompanyName() {
-        return companyName;
+        return company.get();
     }
 
-    /**
-     * @param companyName the companyName to set
-     */
     public void setCompanyName(String companyName) {
-        this.companyName = companyName;
+        this.company.set(companyName);
     }
 
-    /**
-     * @return the description
-     */
-    public String getDescription() {
-        return description;
+    public StringProperty companyNameProperty() {
+        return company;
     }
 
-    /**
-     * @param description the description to set
-     */
-    public void setDescription(String description) {
-        this.description = description;
+    public String getPersonalityType() {
+        return personalityType.get();
     }
 
-    /**
-     * @return the yearlySalary
-     */
-    public int getYearlySalary() {
-        return yearlySalary;
+    public void setPersonalityType(String personality) {
+        this.personalityType.set(personality);
     }
 
-    /**
-     * @param yearlySalary the yearlySalary to set
-     */
-    public void setYearlySalary(int yearlySalary) {
-        this.yearlySalary = yearlySalary;
+    public StringProperty personalityTypeProperty() {
+        return personalityType;
     }
     
 }

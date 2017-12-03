@@ -24,10 +24,14 @@ public class JobList {
     public void buildList(){
         this.jobList = FXCollections.observableArrayList();
         
-        for (int i = 0; i < 5; i++) {
-            Job tempJob = new Job("Title " + i, "Company " + i, "We want personality " + i, (i+1)*478);
+        for (int i = 0; i < 10; i++) {
+            Job tempJob = new Job("Title " + i, "Company " + i, "Critical Thinker");
             this.jobList.add(tempJob);
         }
+    }
+    
+    public ObservableList<Job> getJobData() {
+        return jobList;
     }
     
     public Job getJob(int i){
