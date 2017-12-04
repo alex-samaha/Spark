@@ -24,6 +24,7 @@ public class PostJobUICntl implements Initializable{
     private Stage mainStage;
     private NavigationCntl theNavigationCntl;
     private CareerProfileCntl theCareerProfileCntl;
+    private JobList theJobList;
     
     
     @FXML private Button homeButton;
@@ -46,8 +47,11 @@ public class PostJobUICntl implements Initializable{
         if(jobTextField.getText() != null && companyTextField.getText() != null && descriptionTextField.getText() != null && personalityTextField.getText() != null){
             
             Job newJob = new Job(jobTextField.getText(), companyTextField.getText(), personalityTextField.getText());
-            this.theNavigationCntl.returnTheJobList().add(newJob);
-
+            theJobList = new JobList();
+            theJobList.add(newJob);
+            
+            System.out.println("TITLE: " + newJob.getJobTitle());
+            
             //get the current stage
             mainStage = (Stage) submitButton.getScene().getWindow();
 
