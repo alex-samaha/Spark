@@ -58,8 +58,10 @@ public class CareerProfile {
                     JSONObject job = (JSONObject) userProfile.get(2);
                     
                     this.companyName = name.get("CompanyName").toString();
+                    System.out.println(this.companyName);
                     this.location =  companyLocation.get("JobLocation").toString();
                     this.jobType = job.get("JobType").toString();
+                    break;
                     
                 }
             }

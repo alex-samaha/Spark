@@ -30,6 +30,7 @@ public class CareerProfileEditCntl {
             // load the new fxml file
             root = FXMLLoader.load(getClass().getResource("CareerProfileEditUI.fxml"));
             scene = new Scene(root, 600, 400);
+            scene.getStylesheets().add(getClass().getResource("JobSearchUI.css").toExternalForm());
             
             // set the stage with the new scene (Main Menu)
             mainStage.setScene(scene);
