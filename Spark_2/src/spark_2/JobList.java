@@ -8,11 +8,14 @@ package spark_2;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
 
 /**
  *
@@ -23,8 +26,41 @@ public class JobList {
     private JSONObject data;
     
     public JobList(){
+        
+        try {
+            this.loadData();
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
+        
         if(jobList == null){
             this.buildList();
+        }
+    }
+    
+    public void loadData() throws ParseException{
+        JSONParser parser = new JSONParser();
+        data = new JSONObject();
+        
+        try{
+            Object obj = parser.parse(new FileReader("job_list.json"));
+            data = (JSONObject) obj;
+            JSONArray theJobList = (JSONArray) data.get("jobs");
+            
+            for(Object job : theJobList){
+                JSONObject jobsJSON = (JSONObject) job;
+                
+                JSONObject compName = (JSONObject) jobsJSON.get(0);
+                JSONObject persType = (JSONObject) jobsJSON.get(1);
+                JSONObject jobTitle = (JSONObject) jobsJSON.get(2);
+                
+                Job newJob = new Job(jobTitle.get("JobTitle").toString(),persType.get("PersonalityType").toString(), compName.get("CompanyName").toString());
+                this.jobList.add(newJob);
+            }
+        }
+        catch (IOException e) {
+            e.printStackTrace();
         }
     }
     
