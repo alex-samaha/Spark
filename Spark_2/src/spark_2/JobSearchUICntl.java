@@ -48,7 +48,7 @@ public class JobSearchUICntl {
         // get the user entered search term
         String search = searchTerm.getText();
         
-        // create new list to populate the table with
+        // create new list to populate the table with\
         ObservableList<Job> newJobList = FXCollections.observableArrayList();
         
         // loop through the job names to check if it matches

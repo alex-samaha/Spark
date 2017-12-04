@@ -18,11 +18,11 @@
          </font>
       </Label>
       <TextField fx:id="searchTerm" layoutX="127.0" layoutY="114.0" prefHeight="31.0" prefWidth="192.0" />
-      <TableView fx:id="jobTable" layoutX="127.0" layoutY="161.0" prefHeight="200.0" prefWidth="303.0">
+      <TableView fx:id="jobTable" layoutX="42.0" layoutY="162.0" prefHeight="199.0" prefWidth="507.0">
         <columns>
-          <TableColumn fx:id="jobTitleColumn" prefWidth="75.0" text="Job Title" />
-          <TableColumn fx:id="companyColumn" prefWidth="98.0" text="Company " />
-            <TableColumn fx:id="personalityColumn" prefWidth="128.0" text="Personality Type" />
+          <TableColumn fx:id="jobTitleColumn" prefWidth="157.0" text="Job Title" />
+          <TableColumn fx:id="companyColumn" prefWidth="149.0" text="Company " />
+            <TableColumn fx:id="personalityColumn" prefWidth="129.0" text="Personality Type" />
         </columns>
       </TableView>
       <Label fx:id="searchError" layoutX="179.0" layoutY="365.0" prefHeight="21.0" prefWidth="223.0" textFill="#141414" />

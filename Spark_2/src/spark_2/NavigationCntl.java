@@ -51,7 +51,7 @@ public class NavigationCntl {
             mainStage.setScene(scene);
             mainStage.setTitle("Spark Main Menu");
             mainStage.show();
-            this.theJobList = new JobList();
+            //this.theJobList = new JobList();
             
         }
         

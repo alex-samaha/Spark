@@ -1,6 +1,1 @@
-{"users":[{"Username":"Name 0","Profile Info":[{"Name":"Mike"},{"Personality":"Critical Thinker"},{"Education":"Penn State"},{"UserType":"user"}]},
-        {"Username":"Name 1","Profile Info":[{"Name":"Alex"},{"Personality":"Stable"},{"Education":"Penn State"},{"UserType":"user"}]},
-        {"Username":"Name 2","Profile Info":[{"Name":"Jacques"},{"Personality":"Critical Thinker"},{"Education":"Delaware"},{"UserType":"user"}]},
-        {"Username":"Name 3","Profile Info":[{"Name":"Chris"},{"Personality":"Independent"},{"Education":"Delaware"},{"UserType":"employer"}]},
-        {"Username":"Name 4","Profile Info":[{"Name":"Joey"},{"Personality":"Stable"},{"Education":"Delaware"},{"UserType":"employer"}]}
-        ]}
+{"users":[{"Username":"Name 0","Profile Info":[{"Name":"Mike"},{"Personality":"Critical Thinker"},{"Education":"Penn State"},{"UserType":"user"}]},{"Username":"Name 1","Profile Info":[{"Name":"Alex"},{"Personality":"Stable"},{"Education":"Penn State"},{"UserType":"user"}]},{"Username":"Name 2","Profile Info":[{"Name":"Jacques"},{"Personality":"Critical Thinker"},{"Education":"Delaware"},{"UserType":"user"}]},{"Username":"Name 3","Profile Info":[{"Name":"Chris"},{"Personality":"Independent"},{"Education":"Delaware"},{"UserType":"employer"}]},{"Username":"Name 4","Profile Info":[{"Name":"Joey"},{"Personality":"Stable"},{"Education":"Delaware"},{"UserType":"employer"}]},{"Username":"Name 2","Profile Info":[{"Name":"Jack"},{"Personality":""},{"Education":"U of D"}]}]}

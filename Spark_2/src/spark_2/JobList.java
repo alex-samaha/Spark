@@ -28,6 +28,7 @@ public class JobList {
     public JobList(){
         
         try {
+            jobList = FXCollections.observableArrayList();
             this.loadData();
         }
         catch (Exception e) {
@@ -49,13 +50,17 @@ public class JobList {
             JSONArray theJobList = (JSONArray) data.get("jobs");
             
             for(Object job : theJobList){
-                JSONObject jobsJSON = (JSONObject) job;
                 
-                JSONObject compName = (JSONObject) jobsJSON.get(0);
-                JSONObject persType = (JSONObject) jobsJSON.get(1);
-                JSONObject jobTitle = (JSONObject) jobsJSON.get(2);
+                JSONArray currentJob = (JSONArray) job;
+                JSONObject compName = (JSONObject) currentJob.get(0);
+                JSONObject persType = (JSONObject) currentJob.get(1);
+                JSONObject jobTitle = (JSONObject) currentJob.get(2);
                 
-                Job newJob = new Job(jobTitle.get("JobTitle").toString(),persType.get("PersonalityType").toString(), compName.get("CompanyName").toString());
+                String name = compName.get("CompanyName").toString();
+                String personality = persType.get("PersonalityType").toString();
+                String title = jobTitle.get("JobTitle").toString();
+                
+                Job newJob = new Job(title, name, personality);
                 this.jobList.add(newJob);
             }
         }

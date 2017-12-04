@@ -1,10 +1,1 @@
-{"jobs":[
-
-        [{"CompanyName":"Company 0","PersonalityType":"Critical Thinker","JobTitle":"Title 0"}],
-        [{"CompanyName":"Company 1","PersonalityType":"Critical Thinker","JobTitle":"Title 1"}],
-        [{"CompanyName":"Company 2","PersonalityType":"Critical Thinker","JobTitle":"Title 2"}],
-        [{"CompanyName":"Company 3","PersonalityType":"Critical Thinker","JobTitle":"Title 3"}],
-        [{"CompanyName":"Google"},{"PersonalityType":"Critical Thinker"},{"JobTitle":"Software Engineering"}]
-        
-    ]
-}
+{"jobs":[[{"CompanyName":"Google"},{"PersonalityType":"Critical Thinker"},{"JobTitle":"Software Engineering"}],[{"CompanyName":"Yahoo"},{"PersonalityType":"Critical Thinker"},{"JobTitle":"Data Science"}],[{"CompanyName":"Alphabet"},{"PersonalityType":"Critical Thinker"},{"JobTitle":"Data Engineer"}],[{"CompanyName":"PwC"},{"PersonalityType":"Critical Thinker"},{"JobTitle":"Consultant"}],[{"CompanyName":"Boeing"},{"PersonalityType":"Critical Thinker"},{"JobTitle":"IT Security"}],[{"CompanyName":"General Motors"},{"PersonalityType":"Critical Thinker"},{"JobTitle":"Recruiter"}]]}
