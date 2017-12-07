@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" fx:id="menuLabel" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="spark_2.NavigationUICntl">
+<AnchorPane id="AnchorPane" fx:id="menuLabel" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.151" xmlns:fx="http://javafx.com/fxml/1" fx:controller="spark_2.NavigationUICntl">
    <children>
       <Label layoutX="251.0" layoutY="35.0" prefHeight="27.0" prefWidth="98.0" text="Main Menu" textAlignment="CENTER">
          <font>
@@ -16,7 +16,7 @@
       <Button fx:id="personalityTestButton" layoutX="222.0" layoutY="159.0" mnemonicParsing="false" onAction="#loadTest" text="Personality Test" />
       <Button layoutX="228.0" layoutY="227.0" mnemonicParsing="false" text="Job Suitability" />
       <Button fx:id="jobSearchButton" layoutX="238.0" layoutY="289.0" mnemonicParsing="false" onAction="#loadJobSearch" text="Search Job" />
-      <Button layoutX="462.0" layoutY="346.0" mnemonicParsing="false" text="Notifications" />
       <Button fx:id="exit" layoutX="14.0" layoutY="20.0" mnemonicParsing="false" onAction="#exitApp" text="Exit" />
    </children>
 </AnchorPane>
+
