@@ -24,12 +24,14 @@ public class NavigationUICntl implements Initializable {
     private PersonalityTestCntl thePersonalityTestCntl;
     private CareerProfileCntl theCareerProfileCntl;
     private JobSearchCntl theJobSearchCntl;
+    private TestJobSuitabilityCntl theJobSuitabilityCntl;
     private User theUser;
     private String userType;
     
     @FXML private Button profileButton;
     @FXML private Button personalityTestButton;
     @FXML private Button jobSearchButton;
+    @FXML private Button jobSuitabilityButton;
     
     @FXML public void loadProfile(ActionEvent even) {
         
@@ -67,6 +69,16 @@ public class NavigationUICntl implements Initializable {
         
         // Instantiate JobSearchCntl and pass stage to load JobSearch UI
         theJobSearchCntl = new JobSearchCntl(mainStage);
+       
+    }
+    
+    @FXML public void loadJobSuitability(ActionEvent event) {
+        
+        // grab the current window
+        mainStage = (Stage) jobSuitabilityButton.getScene().getWindow();
+        
+        // Instantiate JobSearchCntl and pass stage to load JobSearch UI
+        theJobSuitabilityCntl = new TestJobSuitabilityCntl(mainStage);
        
     }
     

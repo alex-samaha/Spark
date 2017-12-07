@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="spark_2.TestJobSuitabilityUICntl">
+   <children>
+      <Label layoutX="219.0" layoutY="37.0" text="Test Job Suitability">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="51.0" layoutY="165.0" text="Your Personality" />
+      <Label layoutX="51.0" layoutY="233.0" text="Job's Desired Personality" />
+      <Label layoutX="51.0" layoutY="297.0" text="Result" />
+      <Label layoutX="50.0" layoutY="110.0" text="Job Title" />
+      <TextField fx:id="jobTitleTF" layoutX="266.0" layoutY="105.0" />
+      <TextField fx:id="userPersonalityTF" layoutX="266.0" layoutY="169.0" />
+      <TextField fx:id="desiredPersonalityTF" layoutX="266.0" layoutY="229.0" />
+      <TextField fx:id="resultTF" layoutX="266.0" layoutY="288.0" />
+      <Button fx:id="homeButton" layoutX="515.0" layoutY="350.0" mnemonicParsing="false" onAction="#loadMainMenu" text="Home" />
+      <Button fx:id="exitButton" layoutX="24.0" layoutY="24.0" mnemonicParsing="false" onAction="#exitApp" text="Exit" />
+   </children>
+</AnchorPane>
