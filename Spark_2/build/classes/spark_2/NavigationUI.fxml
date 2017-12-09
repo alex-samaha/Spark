@@ -14,9 +14,8 @@
       </Label>
       <Button fx:id="profileButton" layoutX="253.0" layoutY="99.0" mnemonicParsing="false" onAction="#loadProfile" text="Profile" />
       <Button fx:id="personalityTestButton" layoutX="222.0" layoutY="159.0" mnemonicParsing="false" onAction="#loadTest" text="Personality Test" />
-      <Button layoutX="228.0" layoutY="227.0" mnemonicParsing="false" text="Job Suitability" />
+      <Button fx:id="researchCareersButton" layoutX="218.0" layoutY="227.0" mnemonicParsing="false" onAction="#loadResearchCareers" text="Research Careers" />
       <Button fx:id="jobSearchButton" layoutX="238.0" layoutY="289.0" mnemonicParsing="false" onAction="#loadJobSearch" text="Search Job" />
-      <Button layoutX="462.0" layoutY="346.0" mnemonicParsing="false" text="Notifications" />
       <Button fx:id="exit" layoutX="14.0" layoutY="20.0" mnemonicParsing="false" onAction="#exitApp" text="Exit" />
    </children>
 </AnchorPane>

@@ -25,6 +25,7 @@ public class JobSearchUICntl {
     private Stage mainStage;
     private NavigationCntl theNavigationCntl;
     private JobList theJobList;
+    private JobPageCntl theJobPageCntl;
     
     @FXML private Button homeButton;
     @FXML private Button searchButton;
@@ -51,16 +52,30 @@ public class JobSearchUICntl {
         // create new list to populate the table with\
         ObservableList<Job> newJobList = FXCollections.observableArrayList();
         
-        // loop through the job names to check if it matches
+        // loop through the job names to check if the search matches any
         for(int i = 0; i < theJobList.getJobData().size(); i++) {
-            if(search.contains(theJobList.getJobData().get(i).getJobTitle())) {
+            Job currentJob = theJobList.getJobData().get(i);
+            if(currentJob.getJobTitle().contains(search)) {
                 newJobList.add(theJobList.getJobData().get(i));
             }
         }
         if(newJobList.isEmpty()) {
             searchError.setText("No results from the search term");
         }
-        jobTable.setItems(newJobList);
+        else {
+            searchError.setText("");
+            jobTable.setItems(newJobList);
+        }
+        
+    }
+    
+    @FXML
+    private void loadJobPage() {
+        Job job = jobTable.getSelectionModel().getSelectedItem();
+        Session.theJob = job;
+        
+        mainStage = (Stage) jobTable.getScene().getWindow();
+        theJobPageCntl = new JobPageCntl(mainStage);
         
     }
     

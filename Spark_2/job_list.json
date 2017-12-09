@@ -1,1 +1,8 @@
-{"jobs":[[{"CompanyName":"Google"},{"PersonalityType":"Critical Thinker"},{"JobTitle":"Software Engineering"}],[{"CompanyName":"Yahoo"},{"PersonalityType":"Critical Thinker"},{"JobTitle":"Data Science"}],[{"CompanyName":"Alphabet"},{"PersonalityType":"Critical Thinker"},{"JobTitle":"Data Engineer"}],[{"CompanyName":"PwC"},{"PersonalityType":"Critical Thinker"},{"JobTitle":"Consultant"}],[{"CompanyName":"Boeing"},{"PersonalityType":"Critical Thinker"},{"JobTitle":"IT Security"}],[{"CompanyName":"General Motors"},{"PersonalityType":"Critical Thinker"},{"JobTitle":"Recruiter"}]]}
+{"jobs":[
+    [{"CompanyName":"Google"},{"PersonalityType":"Critical Thinker"},{"JobTitle":"Software Engineering"}],
+    [{"CompanyName":"Yahoo"},{"PersonalityType":"Critical Thinker"},{"JobTitle":"Data Science"}],
+    [{"CompanyName":"Alphabet"},{"PersonalityType":"Critical Thinker"},{"JobTitle":"Data Engineer"}],
+    [{"CompanyName":"PwC"},{"PersonalityType":"Critical Thinker"},{"JobTitle":"Consultant"}],
+    [{"CompanyName":"Boeing"},{"PersonalityType":"Critical Thinker"},{"JobTitle":"IT Security"}],
+    [{"CompanyName":"General Motors"},{"PersonalityType":"Critical Thinker"},{"JobTitle":"Recruiter"}],
+    [{"CompanyName":"New Company"},{"PersonalityType":"Stable"},{"JobTitle":"New Job"}]]}
