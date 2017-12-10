@@ -38,6 +38,12 @@ public class JobPageUICntl implements Initializable {
         theJobSearchCntl = new JobSearchCntl(mainStage);
     }
     
+    @FXML private void loadTestSuitabilityPage(){
+        
+        mainStage = (Stage) testSuitabilityButton.getScene().getWindow();
+        
+        theTestJobSuitabilityCntl = new TestJobSuitabilityCntl(mainStage);
+    }
     
     /**
      * Initializes the controller class.

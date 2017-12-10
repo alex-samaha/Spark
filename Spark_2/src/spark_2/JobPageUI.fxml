@@ -28,7 +28,7 @@
             <Font name="Book Antiqua" size="24.0" />
          </font>
       </Label>
-      <Button fx:id="testSuitabilityButton" layoutX="451.0" layoutY="355.0" mnemonicParsing="false" text="Test Suitability" />
+      <Button fx:id="testSuitabilityButton" layoutX="451.0" layoutY="355.0" mnemonicParsing="false" text="Test Suitability" onAction="#loadTestSuitabilityPage"/>
       <Button fx:id="resultsButton" layoutX="40.0" layoutY="31.0" mnemonicParsing="false" onAction="#loadResultsPage" text="Results" />
    </children>
 </AnchorPane>

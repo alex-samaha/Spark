@@ -47,7 +47,26 @@ public class TestJobSuitabilityUICntl implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
+        Job currentJob = Session.theJob;
+        String thePersonality = Session.personalityType;
         
+        jobTitleTF.setText(currentJob.getJobTitle());
+        jobTitleTF.setEditable(false);
+        
+        userPersonalityTF.setText(thePersonality);
+        userPersonalityTF.setEditable(false);
+        
+        desiredPersonalityTF.setText(currentJob.getPersonalityType());
+        desiredPersonalityTF.setEditable(false);
+        
+        if(currentJob.getPersonalityType().equalsIgnoreCase(thePersonality)){
+            resultTF.setText("You are a match!");
+            resultTF.setEditable(false);
+        }
+        else{
+            resultTF.setText("You are not a match.");
+            resultTF.setEditable(false);
+        }
     }    
     
 }

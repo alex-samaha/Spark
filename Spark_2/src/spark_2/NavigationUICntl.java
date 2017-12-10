@@ -35,7 +35,6 @@ public class NavigationUICntl implements Initializable {
     
     @FXML public void loadProfile(ActionEvent even) {
         
-        theUser = new User();
         userType = theUser.getUserType();
         
         // grab the current window
@@ -89,7 +88,8 @@ public class NavigationUICntl implements Initializable {
      
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        
+        theUser = new User();
+        Session.personalityType = theUser.getPersonalityType();
     }    
     
     

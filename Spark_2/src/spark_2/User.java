@@ -21,6 +21,7 @@ public class User {
     private String name;
     private char[] password;
     private String userType;
+    private String personalityType;
     
     public User(String aUser, char[] aPassword){
         this.name = aUser;
@@ -58,8 +59,10 @@ public class User {
                     // grab the current user's profile data
                     JSONArray userProfile = (JSONArray) userJSON.get("Profile Info");
                     JSONObject type = (JSONObject) userProfile.get(3);
-               
                     
+                    JSONObject personality = (JSONObject) userProfile.get(1);
+               
+                    this.personalityType = personality.get("Personality").toString();
                     this.userType = type.get("UserType").toString();
                     System.out.println(userType);
                     
@@ -81,6 +84,10 @@ public class User {
         return userType;
     }
     
+    
+    public String getPersonalityType(){
+        return this.personalityType;
+    }
 
     /**
      * @return the name
