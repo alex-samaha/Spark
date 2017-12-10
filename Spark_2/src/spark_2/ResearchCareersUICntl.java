@@ -29,11 +29,12 @@ public class ResearchCareersUICntl implements Initializable {
     private CareerList theCareerList;
     private Stage mainStage;
     private NavigationCntl theNavigationCntl;
+    private CareerPageCntl theCareerPageCntl;
     
     @FXML private Button homeButton;
     @FXML private TextField searchField;
     @FXML private Label searchError;
-    @FXML private TableView careerTable;
+    @FXML private TableView<Career> careerTable;
     @FXML private TableColumn<Career, String> careerColumn;
     
     
@@ -65,6 +66,16 @@ public class ResearchCareersUICntl implements Initializable {
             searchError.setText("");
             careerTable.setItems(newCareerList);
         }
+        
+    }
+    
+    @FXML private void loadCareerPage() {
+        Career career = careerTable.getSelectionModel().getSelectedItem();
+        Session.theCareer = career;
+        
+        mainStage = (Stage) careerTable.getScene().getWindow();
+        theCareerPageCntl = new CareerPageCntl(mainStage);
+        
         
     }
 

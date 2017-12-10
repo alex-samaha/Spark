@@ -6,17 +6,23 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
 <AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="spark_2.ResearchCareersUICntl">
    <children>
-      <TableView fx:id="careerTable" layoutX="76.0" layoutY="103.0" prefHeight="249.0" prefWidth="449.0">
+      <TableView fx:id="careerTable" layoutX="76.0" layoutY="135.0" onMouseClicked="#loadCareerPage" prefHeight="211.0" prefWidth="449.0">
         <columns>
           <TableColumn fx:id="careerColumn" prefWidth="454.0" text="Careers" />
         </columns>
       </TableView>
-      <TextField fx:id="searchField" layoutX="142.0" layoutY="59.0" prefHeight="31.0" prefWidth="209.0" />
-      <Button fx:id="searchButton" layoutX="386.0" layoutY="59.0" mnemonicParsing="false" onAction="#search" text="Search" />
+      <TextField fx:id="searchField" layoutX="137.0" layoutY="92.0" prefHeight="31.0" prefWidth="209.0" />
+      <Button fx:id="searchButton" layoutX="373.0" layoutY="92.0" mnemonicParsing="false" onAction="#search" text="Search" />
       <Button fx:id="homeButton" layoutX="506.0" layoutY="21.0" mnemonicParsing="false" onAction="#loadMainMenu" text="Home" />
       <Label fx:id="searchError" alignment="CENTER" layoutX="162.0" layoutY="365.0" prefHeight="21.0" prefWidth="276.0" />
+      <Label alignment="CENTER" layoutX="229.0" layoutY="23.0" text="Research Careers">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

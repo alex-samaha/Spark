@@ -13,5 +13,6 @@ public class Session {
     
     public static String userID;
     public static Job theJob;
+    public static Career theCareer;
     
 }
